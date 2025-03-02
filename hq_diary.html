@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html 
+	lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 🌸侯老师的专属星球 -  星皛的极客实验室</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="/images/avatar.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('/images/local-background.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="星皛的极客实验室">
+        <img
+			src="/images/avatar.jpg"
+			alt="Xingxiao"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/images/avatar.jpg" title="Xingxiao">
+			<img
+				src="/images/avatar.jpg"
+				alt="Xingxiao"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>1</div>
+		<div><span>标签</span>1</div>
+		<div><span>分类</span>1</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple true"
+			href="/hq_diary.html"
+			title="侯齐日记"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				侯齐日记
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2390282463&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/99212760?spm_id_from=333.1007.0.0"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/xingxiao1215"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/xingxiao1215"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/生活杂货铺/">
+              生活杂货铺
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" style="font-size: 10px;">年度总结</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">1</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2025
+		<a href="/">Xingxiao</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://ooo.0x0.ooo/2025/03/02/OQma9p.jpg"
+				data-sizes="auto"
+				alt="🌸侯老师的专属星球"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>🌸侯老师的专属星球</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2025年03月02日</a>
+			<a><i class="kirafont icon-edit-fill"></i>404 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
+		</div>
+		<html><head></head><body><h2><span id="%F0%9F%8E%A8-%E5%8D%B0%E8%B1%A1%E7%94%BB%E5%BB%8A">🎨 <strong>印象画廊</strong></span></h2><figure class="highlight diff"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs diff"><span class="hljs-addition">+ 感谢荒凉的人生中能有你</span><br></code></pre></td></tr></tbody></table></figure>
+<hr>
+<h2><span id="%F0%9F%8E%B5-bgm%E4%B8%BB%E9%A2%98%E6%9B%B2">🎵 BGM主题曲</span></h2><meting-js server="netease" type="song" id="2166151146" mode="circulation" autoplay="true" mutex="true" listmaxheight="340px" preload="auto" theme="#ff0000">
+</meting-js>
+<hr>
+<h2><span id="%F0%9F%8C%88-%E6%80%A7%E6%A0%BC%E8%89%B2%E5%8D%A1">🌈 性格色卡</span></h2><table>
+  <tbody><tr>
+    <td align="center" width="200px">
+      <span style="background:#FFB6C1; display:block; height:40px; border-radius:4px"></span>
+      <strong>温柔粉</strong><br>
+      <em>像草莓棉花糖般的拥抱</em>
+    </td>
+    <td align="center" width="200px">
+      <span style="background:#87CEEB; display:block; height:40px; border-radius:4px"></span>
+      <strong>冰川蓝</strong><br>
+      <em>屏幕灯光照亮的侧颜</em>
+    </td>
+    <td align="center" width="200px">
+      <span style="background:rgb(255,8,0); display:block; height:40px; border-radius:4px"></span>
+      <strong>心跳红</strong><br>
+      <em>手机突然跳出的消息提醒</em>
+    </td>
+  </tr>
+</tbody></table>
+
+<hr>
+<h2><span id="%F0%9F%93%8C-%E8%AE%B0%E5%BF%86%E6%B8%A9%E5%BA%A6%E8%AE%A1">📌 <strong>记忆温度计</strong></span></h2><table>
+<thead>
+<tr>
+<th align="center">时间轴</th>
+<th align="center">事件</th>
+<th align="center">心动指数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">2023-10-26</td>
+<td align="center">“hello”</td>
+<td align="center">🌟🌟🌟🌟🌟</td>
+</tr>
+<tr>
+<td align="center">2024-01-03</td>
+<td align="center">山财一日游</td>
+<td align="center">❤️❤️❤️❤️❤️</td>
+</tr>
+<tr>
+<td align="center">2024-03-23</td>
+<td align="center">哈尔滨到济南极限一夜游</td>
+<td align="center">❤️❤️❤️❤️❤️</td>
+</tr>
+<tr>
+<td align="center">2024-09-07</td>
+<td align="center">“你觉得我是什么颜色什么味道什么动物什么季节”</td>
+<td align="center">❤️❤️❤️❤️❤️</td>
+</tr>
+<tr>
+<td align="center">2024-10-03</td>
+<td align="center">杭州偶遇</td>
+<td align="center">❤️❤️❤️❤️❤️</td>
+</tr>
+<tr>
+<td align="center">2024-12-07</td>
+<td align="center">秦皇岛看海自驾游</td>
+<td align="center">❤️❤️❤️❤️❤️</td>
+</tr>
+</tbody></table>
+<hr>
+<h2><span id="%F0%9F%8C%8D-%E5%9C%B0%E7%90%86%E5%8D%B0%E8%AE%B0">🌍 地理印记</span></h2><h3><span id="%F0%9F%97%BA%EF%B8%8F-%E6%88%91%E4%BB%AC%E7%9A%84%E5%9F%8E%E5%B8%82%E5%BF%83%E8%B7%B3">🗺️ 我们的城市心跳：</span></h3><details>
+<summary>📆 2024-01-03 山财一日游事件</summary>
+
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQg99a.jpg"></p>
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQgVuB.jpg"></p>
+</details>
+<br>
+<details>
+<summary>📆 2024-03-23 周末济南一夜游事件</summary>
+
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQglPK.jpg"></p>
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQgd7l.jpg"></p>
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQgsLg.jpg"></p>
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQgfzs.jpg"></p>
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQg2TS.jpg"></p>
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQguOL.jpg"></p>
+</details>
+<br>
+<details>
+<summary>📆 2024-10-03 十一假期杭州偶遇事件</summary>
+
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQm5vY.jpg"></p>
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQmMFx.jpg"></p>
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQg6vN.jpg"></p>
+</details>
+<br>
+<details>
+<summary>📆 2024-12-07 秦皇岛看海自驾游事件</summary>
+
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQg8cC.jpg"></p>
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQmqUU.jpg"></p>
+<p><img src="https://ooo.0x0.ooo/2025/03/02/OQma9p.jpg"></p>
+</details>
+
+<hr>
+<h2><span id="%F0%9F%93%8D-%E7%A7%98%E5%AF%86%E5%9D%90%E6%A0%87%E6%B8%85%E5%8D%95">📍 秘密坐标清单：</span></h2><ul>
+<li>🧭 H 北纬36°67’ 东经117°37’ </li>
+<li>🧭 Q 北纬45°67’ 东经126°67’ </li>
+<li>🧭 我们的距离1261656m</li>
+</ul>
+<hr>
+<h2><span id="%F0%9F%A4%B9-%E5%AF%B9%E8%AF%9D%E5%8D%9A%E7%89%A9%E9%A6%86">🤹 对话博物馆</span></h2><h3><span id="%E4%BA%BA%E5%9C%A8%E6%97%A0%E8%AF%AD%E7%9A%84%E6%97%B6%E5%80%99%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%AC%91%E4%B8%80%E4%B8%8B">人在无语的时候真的会笑一下。。</span></h3><h3><span id="%E6%9C%AC%E6%9D%A5%E5%9C%A8%E6%82%AC%E5%B4%96%E8%BE%B9%E7%BE%8E%E7%BE%8E%E6%8B%8D%E7%85%A7%E5%91%A2%E6%9C%89%E4%BA%BA%E7%AA%81%E7%84%B6%E6%83%B3%E8%B7%B3%E4%B8%8B%E5%8E%BB">本来在悬崖边美美拍照呢，有人突然想跳下去。。</span></h3><p><img src="https://ooo.0x0.ooo/2025/03/02/OQgcOb.jpg"></p>
+<h3><span id="%E6%9C%9F%E5%BE%85%E6%AF%8F%E4%B8%80%E6%AC%A1%E8%A7%81%E9%9D%A2">期待每一次见面</span></h3><p><img src="https://ooo.0x0.ooo/2025/03/02/OQgINi.jpg"></p>
+<h3><span id="%E5%BC%80%E5%BF%83">开心</span></h3><p><img src="https://ooo.0x0.ooo/2025/03/02/OQmBdv.jpg"></p>
+<h2><span id="%F0%9F%94%84-%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%BD%95">🔄 经典语录：</span></h2><ol>
+<li>“无人在意。。”</li>
+<li>“人在无语的时候真的会笑一下。。”</li>
+</ol>
+<hr>
+<h2><span id="%E2%9C%A8-%E6%8A%80%E6%9C%AF%E5%BD%A9%E8%9B%8B">✨ 技术彩蛋</span></h2><h3><span id="%E8%BE%93%E5%85%A5%E7%A5%9E%E7%A7%98%E6%97%A5%E6%9C%9F%E8%8E%B7%E5%8F%96%E5%BD%A9%E8%9B%8B">输入神秘日期获取彩蛋</span></h3><input type="password" id="secretInput" placeholder="请输入日期xxxx-xx-xx">
+<button onclick="checkAndRedirect()">验证</button>
+
+<p id="message" style="color: red;"></p>
+
+<script>
+  const presetValue = "2023-10-26"; 
+
+  function checkAndRedirect() {
+    // 获取输入内容并去除首尾空格
+    const userInput = document.getElementById('secretInput').value.trim();
+    const messageElement = document.getElementById('message');
+
+    if (userInput === presetValue) {
+      // 匹配时跳转到目标URL
+      window.location.href = "https://mzt.hlj.gov.cn/mzt/c109888/202308/c00_31660034.shtml"; // 替换为你的目标网址
+    } else {
+      // 不匹配时显示错误提示
+      messageElement.textContent = "输入错误，请重试！";
+    }
+  }
+</script>
+<p>&nbsp;<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://media.giphy.com/media/26xBwdIuRJiAIqHwA/giphy.gif" alt="动态表情" class="lazyload"></p>
+</body></html>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Xingxiao<br>
+        <strong>本文链接：</strong><a href="http://xingxiao.xyz/hq_diary.html" title="http:&#x2F;&#x2F;xingxiao.xyz&#x2F;hq_diary.html" target="_blank" rel="noopener">http:&#x2F;&#x2F;xingxiao.xyz&#x2F;hq_diary.html</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="xingxiao1215/comments"
+      data-repo-id="R_kgDOOBtn5g"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOOBtn5s4CneXg"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="noborder_light"
+      data-lang="zh-CN"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
