@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> ESP-8266 -  星皛的极客实验室</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="/images/avatar.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('/images/local-background.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="星皛的极客实验室">
+        <img
+			src="/images/avatar.jpg"
+			alt="Xingxiao"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/images/avatar.jpg" title="Xingxiao">
+			<img
+				src="/images/avatar.jpg"
+				alt="Xingxiao"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>7</div>
+		<div><span>标签</span>2</div>
+		<div><span>分类</span>3</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archives.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/hq_diary.html"
+			title="侯齐日记"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				侯齐日记
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2390282463&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/99212760?spm_id_from=333.1007.0.0"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/xingxiao1215"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/xingxiao1215"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/代码/">
+              代码
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/嵌入式/">
+              嵌入式
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/生活杂货铺/">
+              生活杂货铺
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" style="font-size: 10px;">年度总结</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">1</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2025
+		<a href="/">Xingxiao</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
+			<img
+				data-src="/images/local-background.jpg"
+				data-sizes="auto"
+				alt="ESP-8266"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>ESP-8266</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2025年05月21日</a>
+			<a><i class="kirafont icon-edit-fill"></i>489 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 2 分钟</a>
+		</div>
+		<html><head></head><body><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># ESP8266 简介</span><br><br><span class="hljs-section">## 概述</span><br>ESP8266 是乐鑫科技推出的一款低成本、低功耗的 <span class="hljs-strong">**Wi-Fi 模块**</span>，内置 32 位微处理器（Tensilica Xtensa LX106），支持 802.11 b/g/n Wi-Fi 协议。广泛应用于物联网（IoT）设备、智能家居和传感器网络。<br><br>---<br><br><span class="hljs-section">## 核心特性</span><br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Wi-Fi 功能**</span>：支持 802.11 b/g/n（2.4 GHz），可作为客户端或接入点（AP）<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**处理器**</span>：32 位 RISC CPU，主频最高 160 MHz<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**内存**</span>：64 KB 指令 RAM，96 KB 数据 RAM，外接 Flash（通常 512 KB - 4 MB）<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**GPIO**</span>：17 个通用输入/输出引脚（部分支持 PWM、I²C、SPI）<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**低功耗**</span>：深度睡眠模式电流低至 5 μA<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**网络协议**</span>：支持 TCP/IP、HTTP、MQTT 等协议栈<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**安全特性**</span>：WPA/WPA2 加密、SSL/TLS 支持<br><br>---<br><br><span class="hljs-section">## 开发环境</span><br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Arduino IDE**</span>：通过插件支持 ESP8266，提供简单易用的开发体验<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**ESP-IDF**</span>：官方推荐的开发框架（基于 RTOS）<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**NodeMCU**</span>：基于 Lua 的固件和开发套件<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**AT 指令**</span>：通过串口发送指令快速实现 Wi-Fi 通信<br><br>---<br><br><span class="hljs-section">## 应用场景</span><br><span class="hljs-bullet">-</span> 智能家居设备（温湿度监控、远程控制）<br><span class="hljs-bullet">-</span> 工业传感器数据上传<br><span class="hljs-bullet">-</span> Wi-Fi 摄像头或门铃<br><span class="hljs-bullet">-</span> 基于 Web 的远程控制系统<br><span class="hljs-bullet">-</span> 低成本物联网网关<br><br>---<br><br><span class="hljs-section">## 示例代码（Arduino IDE）</span><br><span class="hljs-code">```cpp</span><br><span class="hljs-code">#include &lt;ESP8266WiFi.h&gt;</span><br><span class="hljs-code"></span><br><span class="hljs-code">const char* ssid = "你的WiFi名称";</span><br><span class="hljs-code">const char* password = "你的WiFi密码";</span><br><span class="hljs-code"></span><br><span class="hljs-code">void setup() {</span><br><span class="hljs-code">  Serial.begin(115200);</span><br><span class="hljs-code">  WiFi.begin(ssid, password);</span><br><span class="hljs-code">  while (WiFi.status() != WL_CONNECTED) {</span><br><span class="hljs-code">    delay(1000);</span><br><span class="hljs-code">    Serial.println("连接中...");</span><br><span class="hljs-code">  }</span><br><span class="hljs-code">  Serial.println("连接成功！");</span><br><span class="hljs-code">}</span><br><span class="hljs-code"></span><br><span class="hljs-code">void loop() {</span><br><span class="hljs-code">  // 添加你的逻辑代码</span><br><span class="hljs-code">}</span><br></code></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2><span id="%E5%B8%B8%E8%A7%81%E5%9E%8B%E5%8F%B7">常见型号</span></h2><table>
+<thead>
+<tr>
+<th>型号</th>
+<th>Flash 容量</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ESP-01</td>
+<td>512 KB</td>
+<td>最基础型号，2个GPIO</td>
+</tr>
+<tr>
+<td>ESP-12F</td>
+<td>4 MB</td>
+<td>高性能，带金属屏蔽罩</td>
+</tr>
+<tr>
+<td>NodeMCU-12</td>
+<td>4 MB</td>
+<td>开发板集成 USB 转串口</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>📌 提示：ESP8266 的供电需稳定（3.3V ±0.2V），建议使用 AMS1117 稳压模块。</p>
+</blockquote>
+<pre><code>
+此文档适合快速了解 ESP8266 的核心功能和开发方式，如需深入细节可参考官方文档或社区资源。
+</code></pre>
+</body></html>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Xingxiao<br>
+        <strong>本文链接：</strong><a href="http://xingxiao.xyz/2025/05/21/ESP-8266/" title="http:&#x2F;&#x2F;xingxiao.xyz&#x2F;2025&#x2F;05&#x2F;21&#x2F;ESP-8266&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;xingxiao.xyz&#x2F;2025&#x2F;05&#x2F;21&#x2F;ESP-8266&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			   
+			<!-- 在找到当前文章所在的 index -->
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2025/05/21/Blinker/"> Blinker</a>
+			</div>
+			                  
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>
+		
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="xingxiao1215/comments"
+      data-repo-id="R_kgDOOBtn5g"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOOBtn5s4CneXg"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="noborder_light"
+      data-lang="zh-CN"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

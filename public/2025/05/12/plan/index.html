@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> plan -  星皛的极客实验室</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="/images/avatar.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('/images/local-background.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="星皛的极客实验室">
+        <img
+			src="/images/avatar.jpg"
+			alt="Xingxiao"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/images/avatar.jpg" title="Xingxiao">
+			<img
+				src="/images/avatar.jpg"
+				alt="Xingxiao"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>7</div>
+		<div><span>标签</span>2</div>
+		<div><span>分类</span>3</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archives.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/hq_diary.html"
+			title="侯齐日记"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				侯齐日记
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2390282463&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/99212760?spm_id_from=333.1007.0.0"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/xingxiao1215"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/xingxiao1215"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/代码/">
+              代码
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/嵌入式/">
+              嵌入式
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/生活杂货铺/">
+              生活杂货铺
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" style="font-size: 10px;">年度总结</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">1</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2025
+		<a href="/">Xingxiao</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
+			<img
+				data-src="/images/local-background.jpg"
+				data-sizes="auto"
+				alt="plan"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>plan</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2025年05月12日</a>
+			<a><i class="kirafont icon-edit-fill"></i>1k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 4 分钟</a>
+		</div>
+		<html><head></head><body><p>以下是针对零基础或初级学习者的<strong>详细周计划</strong>，覆盖26周（6个月），从基础到全栈实战，精确到每周学习目标和项目任务。结合最新技术趋势和就业市场需求设计：</p>
+<hr>
+<h3><span id="%E7%AC%AC1-4%E5%91%A8web%E5%9F%BA%E7%A1%80%E6%94%BB%E5%9D%9A"><strong>第1-4周：Web基础攻坚</strong></span></h3><p><strong>目标</strong>：掌握HTML/CSS/JavaScript核心语法，能独立开发静态页面<br><strong>学习内容</strong>：</p>
+<ul>
+<li><p><strong>第1周</strong>：</p>
+<ul>
+<li>HTML5语义化标签（<code>&lt;header&gt;</code>、<code>&lt;section&gt;</code>等）</li>
+<li>CSS盒模型、选择器优先级</li>
+<li>实战：纯HTML/CSS简历页面</li>
+</ul>
+</li>
+<li><p><strong>第2周</strong>：</p>
+<ul>
+<li>Flex布局（主轴/交叉轴对齐）</li>
+<li>Grid布局（网格模板设计）</li>
+<li>实战：响应式电商产品卡片（适配手机/PC）</li>
+</ul>
+</li>
+<li><p><strong>第3周</strong>：</p>
+<ul>
+<li>JavaScript基础（变量、循环、函数）</li>
+<li>DOM操作（<code>querySelector</code>、事件监听）</li>
+<li>实战：简易计算器</li>
+</ul>
+</li>
+<li><p><strong>第4周</strong>：</p>
+<ul>
+<li>ES6特性（箭头函数、解构赋值）</li>
+<li>异步编程（Promise、<code>fetch</code> API）</li>
+<li>实战：天气查询应用（调用开放API）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3><span id="%E7%AC%AC5-8%E5%91%A8%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96"><strong>第5-8周：前端工程化</strong></span></h3><p><strong>目标</strong>：掌握React框架和现代前端工具链<br><strong>学习内容</strong>：</p>
+<ul>
+<li><p><strong>第5周</strong>：</p>
+<ul>
+<li>React基础（JSX语法、组件生命周期）</li>
+<li><code>useState</code>/<code>useEffect</code> Hooks</li>
+<li>实战：待办事项列表（本地存储数据）</li>
+</ul>
+</li>
+<li><p><strong>第6周</strong>：</p>
+<ul>
+<li>React Router（路由配置）</li>
+<li>组件通信（Props/Context API）</li>
+<li>实战：多页面博客系统</li>
+</ul>
+</li>
+<li><p><strong>第7周</strong>：</p>
+<ul>
+<li>状态管理（Zustand/Redux Toolkit）</li>
+<li>UI库集成（Ant Design/Material UI）</li>
+<li>实战：用户管理后台（表格+表单）</li>
+</ul>
+</li>
+<li><p><strong>第8周</strong>：</p>
+<ul>
+<li>Vite构建工具</li>
+<li>单元测试（Jest）</li>
+<li>实战：优化项目并部署到Vercel</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3><span id="%E7%AC%AC9-12%E5%91%A8%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8"><strong>第9-12周：后端开发入门</strong></span></h3><p><strong>目标</strong>：掌握Node.js+Express基础与数据库操作<br><strong>学习内容</strong>：</p>
+<ul>
+<li><p><strong>第9周</strong>：</p>
+<ul>
+<li>Node.js模块系统（CommonJS/ESM）</li>
+<li>HTTP模块（创建服务器）</li>
+<li>实战：REST API返回静态JSON</li>
+</ul>
+</li>
+<li><p><strong>第10周</strong>：</p>
+<ul>
+<li>Express框架（中间件、路由）</li>
+<li>错误处理（try-catch）</li>
+<li>实战：用户CRUD API（内存存储）</li>
+</ul>
+</li>
+<li><p><strong>第11周</strong>：</p>
+<ul>
+<li>PostgreSQL基础（建表、SQL查询）</li>
+<li>Prisma ORM（模型定义）</li>
+<li>实战：连接数据库实现持久化存储</li>
+</ul>
+</li>
+<li><p><strong>第12周</strong>：</p>
+<ul>
+<li>认证系统（JWT+bcrypt）</li>
+<li>API文档（Swagger）</li>
+<li>实战：登录/注册功能</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3><span id="%E7%AC%AC13-16%E5%91%A8%E5%85%A8%E6%A0%88%E6%95%B4%E5%90%88"><strong>第13-16周：全栈整合</strong></span></h3><p><strong>目标</strong>：前后端联调与性能优化<br><strong>学习内容</strong>：</p>
+<ul>
+<li><p><strong>第13周</strong>：</p>
+<ul>
+<li>CORS跨域处理</li>
+<li>Axios封装</li>
+<li>实战：前端调用自建API</li>
+</ul>
+</li>
+<li><p><strong>第14周</strong>：</p>
+<ul>
+<li>文件上传（Multer）</li>
+<li>云存储（AWS S3或阿里云OSS）</li>
+<li>实战：头像上传功能</li>
+</ul>
+</li>
+<li><p><strong>第15周</strong>：</p>
+<ul>
+<li>缓存策略（Redis基础）</li>
+<li>性能监控（Lighthouse）</li>
+<li>实战：优化API响应速度</li>
+</ul>
+</li>
+<li><p><strong>第16周</strong>：</p>
+<ul>
+<li>WebSocket实时通信</li>
+<li>实战：简易聊天室</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3><span id="%E7%AC%AC17-20%E5%91%A8%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98"><strong>第17-20周：项目实战</strong></span></h3><p><strong>目标</strong>：完成3个可展示的商业级项目<br><strong>项目清单</strong>：</p>
+<ol>
+<li><p><strong>全栈博客系统</strong>（Next.js + NestJS）</p>
+<ul>
+<li>Markdown文章渲染</li>
+<li>评论/点赞功能</li>
+<li>SEO优化</li>
+</ul>
+</li>
+<li><p><strong>电商平台</strong>（React + Express）</p>
+<ul>
+<li>商品搜索/过滤</li>
+<li>购物车+订单系统</li>
+<li>支付宝/微信支付沙箱对接</li>
+</ul>
+</li>
+<li><p><strong>SAAS后台</strong>（Vue + tRPC）</p>
+<ul>
+<li>权限管理系统（RBAC）</li>
+<li>数据可视化（ECharts）</li>
+<li>多环境部署</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3><span id="%E7%AC%AC21-26%E5%91%A8%E6%8E%A5%E7%A7%81%E6%B4%BB%E5%87%86%E5%A4%87"><strong>第21-26周：接私活准备</strong></span></h3><p><strong>目标</strong>：建立技术品牌与接单渠道<br><strong>执行计划</strong>：</p>
+<ul>
+<li><p><strong>第21周</strong>：</p>
+<ul>
+<li>GitHub仓库规范化（README模板、CI/CD）</li>
+<li>技术博客写作（Dev.to/掘金）</li>
+</ul>
+</li>
+<li><p><strong>第22周</strong>：</p>
+<ul>
+<li>制作个人作品集网站</li>
+<li>录制项目演示视频</li>
+</ul>
+</li>
+<li><p><strong>第23周</strong>：</p>
+<ul>
+<li>注册自由职业平台（Upwork、程序员客栈）</li>
+<li>学习合同条款审核</li>
+</ul>
+</li>
+<li><p><strong>第24周</strong>：</p>
+<ul>
+<li>从低价小单起步（如静态页面开发）</li>
+<li>积累5+客户评价</li>
+</ul>
+</li>
+<li><p><strong>第25-26周</strong>：</p>
+<ul>
+<li>报价策略（按功能模块计价）</li>
+<li>建立长期客户维护流程</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3><span id="%E6%AF%8F%E6%97%A5%E5%AD%A6%E4%B9%A0%E6%97%B6%E9%97%B4%E5%88%86%E9%85%8D%E5%BB%BA%E8%AE%AE"><strong>每日学习时间分配建议</strong></span></h3><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown">8:00-10:00  | 理论学习（文档/视频）<br>10:30-12:30 | 编码实战<br>14:00-16:00 | 项目开发<br>16:30-18:00 | 代码重构与优化<br>20:00-21:00 | 技术社区互动（Stack Overflow答题）<br>21:30-22:30 | 复盘与明日计划<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%E5%85%B3%E9%94%AE%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90"><strong>关键资源推荐</strong></span></h3><ol>
+<li><strong>交互式学习</strong>：freeCodeCamp全栈路径</li>
+<li><strong>算法训练</strong>：LeetCode精选75题（侧重实际应用）</li>
+<li><strong>设计参考</strong>：Dribbble/Behance（学习UI设计规范）</li>
+<li><strong>接单技巧</strong>：《Freelance Bible》电子书</li>
+</ol>
+<p><strong>注意事项</strong>：每周保留半天时间复习，每完成一个阶段奖励自己（如购买技术书籍）。遇到卡点时优先查阅官方文档，其次求助技术社区。</p>
+</body></html>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Xingxiao<br>
+        <strong>本文链接：</strong><a href="http://xingxiao.xyz/2025/05/12/plan/" title="http:&#x2F;&#x2F;xingxiao.xyz&#x2F;2025&#x2F;05&#x2F;12&#x2F;plan&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;xingxiao.xyz&#x2F;2025&#x2F;05&#x2F;12&#x2F;plan&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			      
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="xingxiao1215/comments"
+      data-repo-id="R_kgDOOBtn5g"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOOBtn5s4CneXg"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="noborder_light"
+      data-lang="zh-CN"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

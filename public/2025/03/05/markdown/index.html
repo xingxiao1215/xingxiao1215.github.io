@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> markdown基本用法 -  星皛的极客实验室</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="/images/avatar.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('/images/local-background.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="星皛的极客实验室">
+        <img
+			src="/images/avatar.jpg"
+			alt="Xingxiao"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/images/avatar.jpg" title="Xingxiao">
+			<img
+				src="/images/avatar.jpg"
+				alt="Xingxiao"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>7</div>
+		<div><span>标签</span>2</div>
+		<div><span>分类</span>3</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archives.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/hq_diary.html"
+			title="侯齐日记"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				侯齐日记
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2390282463&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/99212760?spm_id_from=333.1007.0.0"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/xingxiao1215"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/xingxiao1215"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/代码/">
+              代码
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/嵌入式/">
+              嵌入式
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/生活杂货铺/">
+              生活杂货铺
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" style="font-size: 10px;">年度总结</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">1</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2025
+		<a href="/">Xingxiao</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
+			<img
+				data-src="/images/local-background.jpg"
+				data-sizes="auto"
+				alt="markdown基本用法"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>markdown基本用法</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2025年03月05日</a>
+			<a><i class="kirafont icon-edit-fill"></i>564 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 2 分钟</a>
+		</div>
+		<html><head></head><body><h1><span id="%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95">基本语法</span></h1><hr>
+<h2><span id="%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE">字体设置</span></h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">示例代码：<br>*倾斜*<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA%E5%80%BE%E6%96%9C">效果展示：<em>倾斜</em></span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">示例代码：<br>_倾斜_<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA%E5%80%BE%E6%96%9C">效果展示：<em>倾斜</em></span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">示例代码：<br>**加粗**<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA%E5%8A%A0%E7%B2%97">效果展示：<strong>加粗</strong></span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">示例代码：<br>***倾斜加粗***<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA%E5%80%BE%E6%96%9C%E5%8A%A0%E7%B2%97">效果展示：<em><strong>倾斜加粗</strong></em></span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">示例代码：<br>~~下划线~~<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA%E4%B8%8B%E5%88%92%E7%BA%BF">效果展示：<del>下划线</del></span></h3><hr>
+<h2><span id="%E5%88%86%E7%BA%A7%E6%A0%87%E9%A2%98">分级标题</span></h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">#      一级标题<br>##     二级标题<br>###    三级标题<br>####   四级标题<br>#####  五级标题<br>###### 六级标题<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA">效果展示：</span></h3><h1><span id="%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98">一级标题</span></h1><h2><span id="%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98">二级标题</span></h2><h3><span id="%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98">三级标题</span></h3><h4><span id="%E5%9B%9B%E7%BA%A7%E6%A0%87%E9%A2%98">四级标题</span></h4><h5><span id="%E4%BA%94%E7%BA%A7%E6%A0%87%E9%A2%98">五级标题</span></h5><h6><span id="%E5%85%AD%E7%BA%A7%E6%A0%87%E9%A2%98">六级标题</span></h6><hr>
+<h2><span id="%E9%93%BE%E6%8E%A5">链接</span></h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">![图片描述](图片路径)<br>&lt;网址&gt;<br>eg:&lt;https://www.baidu.com&gt;<br>[百度](https://www.baidu.com)<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA">效果展示：</span></h3><p><a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com</a><br><a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a></p>
+<hr>
+<h2><span id="%E5%88%86%E5%89%B2%E7%BA%BF">分割线</span></h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">---<br>***<br>___<br><br>效果一样的<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA">效果展示：</span></h3><hr>
+<hr>
+<hr>
+<h2><span id="%E4%BB%A3%E7%A0%81%E5%9D%97">代码块</span></h2><h3><span id="%E5%90%8C%E8%A1%8C%E5%86%85%E5%BC%95%E7%94%A8%E4%BB%A3%E7%A0%81">同行内引用代码：</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">这是`# 一级标题`<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA">效果展示：</span></h3><h3><span id="%E8%BF%99%E6%98%AF%23-%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98">这是<code># 一级标题</code></span></h3><h3><span id="%E4%BB%A3%E7%A0%81%E5%9D%97">代码块</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">三个`<br>代码块<br>三个`<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E4%BB%A3%E7%A0%81%E5%9D%97%E4%B8%AD%E5%8C%85%E5%90%ABhtml%E4%BB%A3%E7%A0%81">代码块中包含html代码</span></h3><hr>
+<h2><span id="%E5%BC%95%E7%94%A8">引用</span></h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">&gt;1<br>&gt;2<br>&gt;3<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA">效果展示：</span></h3><blockquote>
+<p>1<br>2<br>3</p>
+</blockquote>
+<h3><span id="%E5%B5%8C%E5%A5%97%E5%BC%95%E7%94%A8">嵌套引用</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">&gt;&gt;&gt;1<br>&gt;&gt;2<br>&gt;3<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA">效果展示：</span></h3><blockquote>
+<blockquote>
+<blockquote>
+<p>1<br>2<br>3</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<h2><span id="%E5%88%97%E8%A1%A8">列表</span></h2><h3><span id="%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">无序列表</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">- 无序列表<br>- 无序列表<br>- 无序列表<br><br>* 无序列表<br>* 无序列表<br>* 无序列表<br><br>+ 无序列表<br>+ 无序列表<br>+ 无序列表<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA">效果展示：</span></h3><ul>
+<li>无序列表</li>
+<li>无序列表</li>
+<li>无序列表</li>
+</ul>
+<ul>
+<li>无序列表</li>
+<li>无序列表</li>
+<li>无序列表</li>
+</ul>
+<ul>
+<li>无序列表</li>
+<li>无序列表</li>
+<li>无序列表</li>
+</ul>
+<h3><span id="%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8">有序列表</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">1. 有序列表<br>2. 有序列表<br>3. 有序列表<br>4. 有序列表<br>5. 有序列表<br>6. 有序列表<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA">效果展示：</span></h3><ol>
+<li>有序列表</li>
+<li>有序列表</li>
+<li>有序列表</li>
+<li>有序列表</li>
+<li>有序列表</li>
+<li>有序列表</li>
+</ol>
+<h3><span id="%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8">混合使用</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">* 1. 混合使用<br>* 2. 混合使用<br>- 1. 混合使用<br>- 2. 混合使用<br>+ 1. 混合使用 <br>  2. 混合使用<br>+ 1. 混合使用<br></code></pre></td></tr></tbody></table></figure>
+<h3><span id="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA">效果展示</span></h3><ul>
+<li><ol>
+<li>混合使用</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>混合使用</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><ol>
+<li>混合使用</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>混合使用</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><ol>
+<li>混合使用 </li>
+<li>混合使用</li>
+</ol>
+</li>
+<li><ol>
+<li>混合使用</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2><span id="%E8%A1%A8%E6%A0%BC">表格</span></h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">姓名|年龄|手机号<br>-|-|-<br>张三|18|138********<br>李四|19|150********<br></code></pre></td></tr></tbody></table></figure>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>年龄</th>
+<th>手机号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>张三</td>
+<td>18</td>
+<td>138********</td>
+</tr>
+<tr>
+<td>李四</td>
+<td>19</td>
+<td>150********</td>
+</tr>
+</tbody></table>
+<h3><span id="%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F">对齐方式</span></h3><h3><span id="-----------">:-    |  :-:  |-:</span></h3><h2><span id="%E5%B7%A6%E5%AF%B9%E9%BD%90-%E5%B1%85%E4%B8%AD%E5%AF%B9%E9%BD%90-%E5%8F%B3%E5%AF%B9%E9%BD%90%23%23-latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">左对齐 居中对齐 右对齐<br>## LaTex数学公式</span></h2><h2><span id="%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0">参考文章：</span></h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014061630/article/details/81359144?sharetype=blog&amp;shareId=81359144&amp;sharerefer=APP&amp;sharesource=xingxiao7418&amp;sharefrom=link">https://blog.csdn.net/u014061630/article/details/81359144?sharetype=blog&amp;shareId=81359144&amp;sharerefer=APP&amp;sharesource=xingxiao7418&amp;sharefrom=link</a></p>
+</body></html>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Xingxiao<br>
+        <strong>本文链接：</strong><a href="http://xingxiao.xyz/2025/03/05/markdown/" title="http:&#x2F;&#x2F;xingxiao.xyz&#x2F;2025&#x2F;03&#x2F;05&#x2F;markdown&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;xingxiao.xyz&#x2F;2025&#x2F;03&#x2F;05&#x2F;markdown&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			      
+			<!-- 先找到与当前文字相同的目录 -->
+			   
+			<!-- 在找到当前文章所在的 index -->
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2025/05/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"> 面向对象</a>
+			</div>
+			                     
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/Markdown/" rel="tag">Markdown</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="xingxiao1215/comments"
+      data-repo-id="R_kgDOOBtn5g"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOOBtn5s4CneXg"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="noborder_light"
+      data-lang="zh-CN"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
